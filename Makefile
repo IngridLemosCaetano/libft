@@ -29,8 +29,12 @@ SRCS =	\
 		ft_toupper.c \
 		ft_strchr.c \
 		ft_strlcpy.c \
+		ft_strlcat.c \ alterações realizadas
+		ft_strrchr.c \
+		ft_strncmp.c \
+		ft_strnstr.c \
 
-OBJ = $(SRCS:.c =.o)
+OBJS = $(SRCS:.c =.o)
 
 all: $(NAME)
 
@@ -41,9 +45,10 @@ $(NAME): $(OBJS)
 	$(CC) $(FLAGS) -c $< -o
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJS)
 fclean:
 	rm -f $(NAME)
 re:
 	fclean all
 
+.PHONY: all clean fclean re
