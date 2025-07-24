@@ -6,7 +6,7 @@
 #    By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/22 11:29:52 by ilemos-c          #+#    #+#              #
-#    Updated: 2025/07/22 16:40:38 by ilemos-c         ###   ########.fr        #
+#    Updated: 2025/07/24 18:16:00 by ilemos-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,11 +29,16 @@ SRCS =	\
 		ft_toupper.c \
 		ft_strchr.c \
 		ft_strlcpy.c \
-		ft_strlcat.c \ alterações realizadas
+		ft_strlcat.c \
 		ft_strrchr.c \
 		ft_strncmp.c \
 		ft_strnstr.c \
 		ft_atoi.c \
+		ft_strdup.c \
+		ft_calloc.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		
 
 OBJS = $(SRCS:.c =.o)
 
@@ -52,4 +57,3 @@ fclean:
 re:
 	fclean all
 
-.PHONY: all clean fclean re

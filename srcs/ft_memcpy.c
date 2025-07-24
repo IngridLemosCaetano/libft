@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/24 12:03:44 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/24 12:24:05 by ilemos-c         ###   ########.fr       */
+/*   Created: 2025/07/24 17:05:48 by ilemos-c          #+#    #+#             */
+/*   Updated: 2025/07/24 18:13:19 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	size_t i;
+	char	*v_src;
+	char	*v_dest;
 
 	i = 0;
-	while ((s1[i] || s2[i]) && i < n)
+	v_src = (char *)src;
+	v_dest = (char *)dest;
+	if (!dest && !src)
+		return (NULL);
+	while (i < n)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-	i++;
+		v_dest[i] = v_src[i];
+		i++;
 	}
-	return (0);
+	return(dest);
 }
 /*
-int main(void)
+int	main(void)
 {
-	const char *s1 = "Ingrid";
-	const char *s2 = "InGrId";
-	size_t n = 3;
-	printf("%d\n", ft_strncmp(s1, s2, n));
+	char	src[] = "Escola 42";
+	char	dest[10];
+
+	ft_memcpy(dest, src, sizeof(src));
+	printf("%s", dest);
 	return (0);
 }*/

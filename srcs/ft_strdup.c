@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/24 12:03:44 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/24 12:24:05 by ilemos-c         ###   ########.fr       */
+/*   Created: 2025/07/24 12:28:57 by ilemos-c          #+#    #+#             */
+/*   Updated: 2025/07/24 17:52:51 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
+	int		size;
+	char	*dest;
 
-	i = 0;
-	while ((s1[i] || s2[i]) && i < n)
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-	i++;
-	}
-	return (0);
+	size = ft_strlen((char *)s);
+	dest = (char *)malloc(sizeof(char) * (size + 1));
+	if (dest == NULL)
+		return (NULL);
+	ft_strlcpy(dest, s, (size + 1));
+	return (dest);
 }
 /*
-int main(void)
+int	main(void)
 {
-	const char *s1 = "Ingrid";
-	const char *s2 = "InGrId";
-	size_t n = 3;
-	printf("%d\n", ft_strncmp(s1, s2, n));
+	const char *s = "Ingrid";
+	printf("String destino = %s", ft_strdup(s));
 	return (0);
 }*/

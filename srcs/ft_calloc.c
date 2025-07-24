@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/24 12:03:44 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/24 12:24:05 by ilemos-c         ###   ########.fr       */
+/*   Created: 2025/07/24 13:26:36 by ilemos-c          #+#    #+#             */
+/*   Updated: 2025/07/24 15:21:17 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_calloc(size_t nelem, size_t elsize)
 {
-	size_t	i;
+	size_t	size;
 
-	i = 0;
-	while ((s1[i] || s2[i]) && i < n)
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-	i++;
-	}
-	return (0);
+	size = malloc(sizeof(elsize) * nelem);
 }
-/*
-int main(void)
-{
-	const char *s1 = "Ingrid";
-	const char *s2 = "InGrId";
-	size_t n = 3;
-	printf("%d\n", ft_strncmp(s1, s2, n));
-	return (0);
-}*/

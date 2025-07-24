@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/24 12:03:44 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/24 12:24:05 by ilemos-c         ###   ########.fr       */
+/*   Created: 2025/07/24 18:14:53 by ilemos-c          #+#    #+#             */
+/*   Updated: 2025/07/24 18:31:27 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
+	char	*v_dest;
+	char	*v_src;
 
 	i = 0;
-	while ((s1[i] || s2[i]) && i < n)
+	v_dest = (char *)dest;
+	v_src = (char *)src;
+	if (dest < src)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-	i++;
+		v_dest[i] = v_src[i];
+		i++;
 	}
-	return (0);
+	
+	return (dest);
 }
-/*
-int main(void)
-{
-	const char *s1 = "Ingrid";
-	const char *s2 = "InGrId";
-	size_t n = 3;
-	printf("%d\n", ft_strncmp(s1, s2, n));
-	return (0);
-}*/
