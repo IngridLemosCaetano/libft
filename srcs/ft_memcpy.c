@@ -6,7 +6,7 @@
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 17:05:48 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/24 18:13:19 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/07/26 13:44:03 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t i;
+	size_t	i;
 	char	*v_src;
 	char	*v_dest;
 
@@ -28,7 +28,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		v_dest[i] = v_src[i];
 		i++;
 	}
-	return(dest);
+	return (dest);
 }
 /*
 int	main(void)

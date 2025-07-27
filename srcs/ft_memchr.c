@@ -6,7 +6,7 @@
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 18:34:00 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/24 18:37:32 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/07/26 13:48:15 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t  i;
-    const unsigned char  *v_s;
+	size_t				i;
+	const unsigned char	*v_s;
 
-    i = 0;
-    v_s = (const unsigned char *)s;
-    while (i < n)
-    {
-        if (v_s[i] == (unsigned char)c)
-            return ((void *)&v_s[i]);
-        i++;
-    }
-    return (NULL);    
+	i = 0;
+	v_s = (const unsigned char *)s;
+	while (i < n)
+	{
+		if (v_s[i] == (unsigned char)c)
+			return ((void *)&v_s[i]);
+		i++;
+	}
+	return (NULL);
 }
-
+/*
 int	main(void)
 {
 	const char *s = "Ingrid";
@@ -39,4 +39,4 @@ int	main(void)
 	else
 		printf("Caracter não encontrado");
 	return (0);
-}
+}*/
