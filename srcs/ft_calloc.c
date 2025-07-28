@@ -14,7 +14,31 @@
 
 void	*ft_calloc(size_t nelem, size_t elsize)
 {
-	size_t	size;
+	unsigned char	*ptr;
 
-	size = malloc(sizeof(elsize) * nelem);
+	ptr = malloc(nelem * elsize);
+	if (ptr == NULL)
+		return (NULL);
+	ft_memset(ptr, 0, (nelem * elsize));
+	return (ptr);
 }
+/*
+int	main(void)
+{
+	int	*arr;
+	size_t i;
+
+	arr = (int *)ft_calloc(10, sizeof(int));
+	if (arr == NULL)
+		printf("Erro na alocação de memória!\n");
+	printf("Valores após alocação e zeragem:\n");
+	i = 0;
+	while (i < 10)
+	{
+		printf("%d ", arr[i]);
+		i++;
+	}
+	printf("\n");
+	free(arr);
+	return (0);
+}*/
