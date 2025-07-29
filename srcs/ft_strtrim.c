@@ -4,12 +4,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
-	int		x;
 	char	*new_str;
 
 	i = 0;
 	j = 0;
-	x = 0;
 	if (!s1 || !set)
 		return (NULL);
 	new_str = malloc(ft_strlen(s1) + 1);

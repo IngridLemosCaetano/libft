@@ -21,3 +21,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
+/*
+int	main(void)
+{
+	char	*str = "Escola 42 São Paulo";
+	char	*result;
+
+	result = ft_substr(str, 7, 6);
+	if (result)
+	{
+		printf("Substring: \"%s\"\n", result);
+		free(result);
+	}
+	else
+	{
+		printf("Erro ao gerar substring.\n");
+	}
+	return (0);
+}
+*/
