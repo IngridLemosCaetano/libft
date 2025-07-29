@@ -40,6 +40,9 @@ SRCS =	\
 		ft_memmove.c \
 		ft_memchr.c \
 		ft_memcmp.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
 
 OBJS = $(SRCS:.c =.o)
 

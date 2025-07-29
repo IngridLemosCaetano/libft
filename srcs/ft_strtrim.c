@@ -4,28 +4,26 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
-	char	*new_str;
 	int		x;
+	char	*new_str;
 
 	i = 0;
 	j = 0;
 	x = 0;
-	while (s1[i])
-	{
-		if (s1[i] == set[0])
-			i++;
-		else
-		{
-            new_str[j] = s1[i];
-            i++;
-            j++;
-		}
-	}	
-	while (new_str[x])
-		x++;
-	new_str = (char *)malloc(x +1);
+	if (!s1 || !set)
+		return (NULL);
+	new_str = malloc(ft_strlen(s1) + 1);
 	if (!new_str)
 		return (NULL);
+	while (s1[i])
+	{
+		if (s1[i] != set[0])
+		{
+			new_str[j] = s1[i];
+			j++;
+		}
+		i++;
+	}	
 	new_str[j] = '\0';
 	return(new_str);
 }
