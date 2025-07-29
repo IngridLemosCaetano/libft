@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/22 12:00:14 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/22 14:40:56 by ilemos-c         ###   ########.fr       */
+/*   Created: 2025/07/22 12:14:18 by ilemos-c          #+#    #+#             */
+/*   Updated: 2025/07/29 19:21:31 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int	ft_isalnum(int c)
 {
-	if (c >= 0 && c <= 9)
+	if ((c >= '0' && c <= '9') || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);
 	return (0);
 }
 /*
 int	main(void)
 {
-	int	n1 = 0;
-	int	n2 = 9;
-	int	n3 = '0';
-	int	n4 = 'c';
-
-	printf("%d\n", ft_isdigit(n1));
-	printf("%d\n", ft_isdigit(n2));
-	printf("%d\n", ft_isdigit(n3));
-	printf("%d\n", ft_isdigit(n4));
+	int n1 = 0;
+	int n2 = '9';
+	int a = 'a';
+	int z = ' ';
+	printf("%d\n", ft_isalnum(n1));
+	printf("%d\n", ft_isalnum(n2));
+	printf("%d\n", ft_isalnum(a));
+	printf("%d\n", ft_isalnum(z));
+	return (0);
 }*/

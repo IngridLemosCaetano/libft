@@ -6,7 +6,7 @@
 #    By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/22 11:29:52 by ilemos-c          #+#    #+#              #
-#    Updated: 2025/07/24 18:33:54 by ilemos-c         ###   ########.fr        #
+#    Updated: 2025/07/29 19:08:16 by ilemos-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ SRCS =	\
 		ft_strjoin.c \
 		ft_strtrim.c \
 
-OBJS = $(SRCS:.c =.o)
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
@@ -52,7 +52,7 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 %.o : srcs/%.c
-	$(CC) $(FLAGS) -c $< -o
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
