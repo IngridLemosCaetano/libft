@@ -1,30 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   test_strnstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/22 12:46:21 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/29 15:51:07 by ilemos-c         ###   ########.fr       */
+/*   Created: 2025/07/29 15:21:24 by ilemos-c          #+#    #+#             */
+/*   Updated: 2025/07/29 15:21:35 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	while (str[i])
+	if (*s2 == '\0')
+		return ((char *)s1);
+	while (s1[i] && i < n)
+	{
+		j = 0;
+		while (s1[i + j] == s2[j] && (i + j) < n)
+		{
+			j++;
+			if (s2[j] == '\0')
+				return ((char *)&s1[i]);
+		}
 		i++;
-	return (i);
+	}
+	return (NULL);
 }
 /*
-int	main(void)
+int main(void)
 {
-	char *str = "Ingrid";
-	printf("%d\n", ft_strlen(str));
+	const char *s1 = "Bom Dia, ia te perguntar... Estara livre amanhã.";
+	const char *s2 = "ia";
+	size_t n = 7;
+	printf("%s\n", ft_strnstr(s1, s2, n));
 	return (0);
 }*/

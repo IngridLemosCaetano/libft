@@ -6,7 +6,7 @@
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 13:26:36 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/24 15:21:17 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/07/29 14:20:29 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 int	main(void)
 {
 	int	*arr;
-	size_t i;
+	size_t i = 0;
+	size_t j = 10;
 
-	arr = (int *)ft_calloc(10, sizeof(int));
+	arr = (int *)ft_calloc(j, sizeof(int));
 	if (arr == NULL)
 		printf("Erro na alocação de memória!\n");
 	printf("Valores após alocação e zeragem:\n");
-	i = 0;
-	while (i < 10)
+	while (i < j)
 	{
 		printf("%d ", arr[i]);
 		i++;
