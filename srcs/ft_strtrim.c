@@ -6,7 +6,7 @@
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 14:24:50 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/29 16:03:29 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/07/29 17:49:19 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,37 +28,38 @@ int	ft_is_in_set(char c, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	char	*new_str;
+	size_t	start;
+	size_t	end;
 
-	i = 0;
-	j = 0;
-	if (!s1 || !set)
-		return (NULL);
-	new_str = malloc(ft_strlen((char *)s1) + 1);
-	if (!new_str)
-		return (NULL);
-	while (s1[i])
-	{
-		if (!ft_is_in_set(s1[i], set))
-		{
-			new_str[j] = s1[i];
-			j++;
-		}
-		i++;
-	}
-	new_str[j] = '\0';
-	return (new_str);
+	start = 0;
+	if (!s1)
+		return (ft_strdup(""));
+	if (!set)
+		return (ft_strdup(s1));
+	end = ft_strlen((char *)s1);
+	while (ft_is_in_set(s1[start], set))
+		start++;
+	if (start == end)
+		return (ft_strdup(""));
+	while (ft_is_in_set(s1[end - 1], set))
+		end--;
+	return (ft_substr(s1, start, end - start));
 }
-
+/*
 int	main(void)
 {
-	char const	*s1 = "Bondoso";
-	char const	*set = "oso";
-	char	*new_str;
-	new_str = ft_strtrim(s1, set);
-	printf("%s\n", new_str);
-	free(new_str);
+	char const	*s1 = "osoBondosoos";
+	char const	*set = "os";
+	char	*trimmed;
+	trimmed = ft_strtrim(s1, set);
+	if (trimmed)
+	{
+		printf("Trimmed: %s\n", trimmed);
+		free(trimmed);
+	}
+	else
+	{
+		printf("Erro ao alocar memória.\n");
+	}
 	return (0);
-}
+}*/
