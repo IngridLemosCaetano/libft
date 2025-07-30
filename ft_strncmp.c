@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 12:03:44 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/29 20:47:05 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/07/30 10:04:11 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (new_s1[i] != new_s2[i])
 			return (new_s1[i] - new_s2[i]);
-	i++;
+		i++;
 	}
 	return (0);
 }
