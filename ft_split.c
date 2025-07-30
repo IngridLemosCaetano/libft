@@ -1,30 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/22 12:46:21 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/30 10:22:25 by ingrid           ###   ########.fr       */
+/*   Created: 2025/07/30 11:12:45 by ingrid            #+#    #+#             */
+/*   Updated: 2025/07/30 11:15:02 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-/*
-int	main(void)
-{
-	char *str = "Ingrid";
-	printf("%d\n", ft_strlen(str));
-	return (0);
-}*/
+char	**ft_split(char const *s, char c);
