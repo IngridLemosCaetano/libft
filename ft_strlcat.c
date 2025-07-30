@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 12:03:17 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/30 11:54:39 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/07/30 15:01:26 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[dst_length + i] = src[i];
 		i++;
 	}
-	if (dst_length + i < size)
-		dst[dst_length + i] = '\0';
+	dst[dst_length + i] = '\0';
 	return (dst_length + src_length);
 }
 /*
 int main(void)
 {
-	char dst[20] = "Hello";
-	const char *src = "World";
-	size_t size = ft_strlcat(dst, src, sizeof(dst));
+	char dst[100] = "Hello 4";
+	const char *src = "2 World";
+	size_t size = 15;
+	size_t  ret = ft_strlcat(dst, src, size);
 	printf("dst: %s\n", dst);
-	printf("Return: %zu\n", size);
+	printf("Return: %ld\n", ret);
 	return (0);
 }*/

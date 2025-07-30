@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 14:22:39 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/30 11:36:43 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/07/30 15:12:10 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	s_len = ft_strlen((char *)s);
+	s_len = ft_strlen(s);
 	if (start >= s_len)
 		return ((char *)ft_calloc(1, sizeof(char)));
 	substr = (char *)malloc(sizeof(char) * (len + 1));
