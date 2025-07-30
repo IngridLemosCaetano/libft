@@ -6,7 +6,7 @@
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 12:03:32 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/24 12:27:42 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/07/29 20:31:21 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 		i++;
-	while (s[i] >= 0)
+	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char *)c)
 			return ((char *)&s[i]);
 		i--;
 	}
