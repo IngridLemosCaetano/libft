@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 11:12:45 by ingrid            #+#    #+#             */
-/*   Updated: 2025/07/31 09:30:46 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/07/31 16:27:14 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	ft_count_words(char const *s, char c)
 {
 	int		i;
 	int		count;
+
 	i = 0;
 	count = 0;
 	if (!s)
@@ -31,36 +32,45 @@ int	ft_count_words(char const *s, char c)
 	}
 	return (count);
 }
-/*
+
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
-	char	**new_ptr;
-	int		s_len;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	start;
+	char			**words;
+	unsigned int	count_words;
 
-	s_len = (int)ft_strlen(s);
-	new_ptr = (char **)malloc(s_len * size_of(char *));
-	if (!new_ptr)
-		return (NULL);
 	i = 0;
+	j = 0;
+	count_words = ft_count_words(s, c);
+	words = malloc(sizeof(char *) * (count_words + 1));
+	if (!words)
+		return (NULL);
 	while (s[i])
 	{
-		j = 0;
-		while (s[i] != c)
+		if (s[i] != c)
 		{
-			new_ptr[i][j] = s[i + 1];
+			start = i;
+			while (s[i] != c && s[i] != '\0')
+				i++;
+			words[j] = ft_substr(s, start, (i - start));
 			j++;
 		}
-		i++;
+		else
+			i++;
 	}
-	return (new_ptr);
-}*/
-
+	words[j] = NULL;
+	return (words);
+}
+/*
 int	main(void)
 {
-	const char	s[100] = "Hello, Ingrid";
-	char	c = ' ';
-	printf("%d\n", ft_count_words(s, c));
+	//const char	s[100] = "-Hello--Ingrid-a";
+	char	c = '-';
+	//printf("%d\n", ft_count_words(s, c));
+	const char	s[100] = "-Hello--Ingrid-a";
+	char	**ptr = ft_split(s, c);
+	printf("%s", ptr[2]);
 	return (0);
-}
+}*/
