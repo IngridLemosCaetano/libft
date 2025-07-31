@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+         #
+#    By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/22 11:29:52 by ilemos-c          #+#    #+#              #
-#    Updated: 2025/07/30 11:13:44 by ingrid           ###   ########.fr        #
+#    Updated: 2025/07/31 17:14:42 by ilemos-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,8 @@ SRCS =	\
 		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_split.c \
+		ft_itoa.c \
+		
 
 OBJS = $(SRCS:.c=.o)
 
