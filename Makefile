@@ -6,7 +6,7 @@
 #    By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/22 11:29:52 by ilemos-c          #+#    #+#              #
-#    Updated: 2025/08/01 20:19:35 by ingrid           ###   ########.fr        #
+#    Updated: 2025/08/01 22:03:50 by ingrid           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,8 @@ SRCS =	\
 		ft_itoa.c \
 		ft_strmapi.c \
 		ft_striteri.c \
-		
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
 
 OBJS = $(SRCS:.c=.o)
 
