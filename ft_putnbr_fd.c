@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/01 22:03:27 by ingrid            #+#    #+#             */
-/*   Updated: 2025/08/01 22:38:26 by ingrid           ###   ########.fr       */
+/*   Created: 2025/08/01 22:23:27 by ingrid            #+#    #+#             */
+/*   Updated: 2025/08/01 22:25:06 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	if (n)
+		write(fd, n, ft_strlen())
 }
-/*
-int	main(void)
-{
-	ft_putstr_fd("Escola 42", 1);
-	return (0);
-}*/
