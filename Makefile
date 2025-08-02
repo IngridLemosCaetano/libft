@@ -6,15 +6,15 @@
 #    By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/22 11:29:52 by ilemos-c          #+#    #+#              #
-#    Updated: 2025/08/01 22:23:49 by ingrid           ###   ########.fr        #
+#    Updated: 2025/08/02 20:40:27 by ingrid           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-INCLUDES = ./includes
+INCLUDES = -I
 CC = cc
-FLAGS = -Wall -Wextra -Werror - I $(INCLUDES)
+FLAGS = -Wall -Wextra -Werror $(INCLUDES)
 AR = ar rcs
 SRCS =	\
 		ft_isalpha.c \

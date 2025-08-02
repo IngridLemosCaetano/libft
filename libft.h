@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 11:28:23 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/01 22:24:17 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/02 19:52:53 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 # include <stdlib.h>
 # include <string.h>
 # include <bsd/string.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
