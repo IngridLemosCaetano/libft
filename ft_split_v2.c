@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/30 11:12:45 by ingrid            #+#    #+#             */
-/*   Updated: 2025/08/05 19:46:36 by ingrid           ###   ########.fr       */
+/*   Created: 2025/08/05 14:44:56 by ingrid            #+#    #+#             */
+/*   Updated: 2025/08/05 19:23:58 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,29 +19,31 @@ int	ft_count_words(char const *s, char c)
 
 	i = 0;
 	count = 0;
-	if (!s)
-		return (0);
-	else
+	while (s[i])
 	{
-		while (s[i])
-		{
-			if (s[i] != c && (i == 0 || s[i - 1] == c))
-				count++;
-			i++;
-		}
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+			count++;
+		i++;
 	}
 	return (count);
 }
 
+void	ft_free_words(char **words, int n)
+{
+	while (--n >= 0)
+		free(words[n]);
+	free(words);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	start;
-	char			**words;
+	int		i;
+	int		j;
+	int		start;
+	char	**words;
 
 	words = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
-	if (!words)
+	if (!s || !words)
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -52,7 +54,9 @@ char	**ft_split(char const *s, char c)
 			start = i;
 			while (s[i] && s[i] != c)
 				i++;
-			words[j] = ft_substr(s, start, (i - start));
+			words[j] = ft_substr(s, start, i - start);
+			if (!words[j])
+				return (ft_free_words(words, j), NULL);
 			j++;
 		}
 		else

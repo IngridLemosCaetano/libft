@@ -6,18 +6,16 @@
 #    By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/22 11:29:52 by ilemos-c          #+#    #+#              #
-#    Updated: 2025/08/02 20:40:27 by ingrid           ###   ########.fr        #
+#    Updated: 2025/08/05 14:07:36 by ingrid           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-INCLUDES = -I
 CC = cc
-FLAGS = -Wall -Wextra -Werror $(INCLUDES)
+FLAGS = -Wall -Wextra -Werror
 AR = ar rcs
-SRCS =	\
-		ft_isalpha.c \
+SRCS =	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
 		ft_isascii.c \
@@ -59,7 +57,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-%.o : srcs/%.c
+%.o : %.c
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
