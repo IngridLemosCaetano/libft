@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 10:51:17 by ingrid            #+#    #+#             */
-/*   Updated: 2025/08/06 11:03:09 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/06 11:06:28 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	{
 		if (*lst)
 		{
-			add_back = ft_lstadd_back(*lst);
+			add_back = *lst;
+			while (add_back->next)
+				add_back = add_back->next;
 			add_back->next = new;
 		}
 		else
