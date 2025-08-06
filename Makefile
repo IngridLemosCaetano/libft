@@ -6,7 +6,7 @@
 #    By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/22 11:29:52 by ilemos-c          #+#    #+#              #
-#    Updated: 2025/08/05 14:07:36 by ingrid           ###   ########.fr        #
+#    Updated: 2025/08/06 09:31:27 by ingrid           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,9 +48,14 @@ SRCS =	ft_isalpha.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
+		ft_putnbr_fd.c
+
+SRCS_BONUS = ft_lstnew_bonus.c \
+
 
 OBJS = $(SRCS:.c=.o)
+
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 all: $(NAME)
 
@@ -61,10 +66,13 @@ $(NAME): $(OBJS)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus: $(OBJS) $(OBJS_BONUS)
+	$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
 
