@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 10:51:17 by ingrid            #+#    #+#             */
-/*   Updated: 2025/08/06 11:06:28 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/07 10:24:48 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,23 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 			*lst = new;
 	}
 }
+/*
+int	main (void)
+{
+	t_list *head = NULL;
+
+	ft_lstadd_back(&head, ft_lstnew("A"));
+	ft_lstadd_back(&head, ft_lstnew("B"));
+	ft_lstadd_back(&head, ft_lstnew("C"));
+
+	t_list *temp = head;
+
+	while (temp)
+	{
+		printf("[%s] -> ", (char *)temp->content);
+		temp = temp->next;
+	}
+	printf("NULL\n");
+
+	return (0);
+}*/
