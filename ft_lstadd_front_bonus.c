@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 09:41:55 by ingrid            #+#    #+#             */
-/*   Updated: 2025/08/06 10:06:09 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/07 22:39:08 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new)
-		return;
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

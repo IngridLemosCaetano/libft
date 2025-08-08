@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 13:26:36 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/31 11:28:30 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/07 23:00:19 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,17 @@
 
 void	*ft_calloc(size_t nelem, size_t elsize)
 {
-	unsigned char	*ptr;
+	void	*ptr;
 
-	ptr = (unsigned char *)malloc(nelem * elsize);
-	if (ptr == NULL)
+	if (elsize != 0 && nelem > SIZE_MAX / elsize)
+		return (NULL);
+	if (nelem == 0 || elsize == 0)
+	{
+		nelem = 1;
+		elsize = 1;
+	}
+	ptr = malloc(nelem * elsize);
+	if (!ptr)
 		return (NULL);
 	ft_memset(ptr, 0, (nelem * elsize));
 	return (ptr);
