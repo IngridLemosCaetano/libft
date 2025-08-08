@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 14:33:41 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/29 20:38:07 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/08 19:27:05 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,15 @@ char	*ft_strchr(const char *s, int c)
 int	main(void)
 {
 	const char *s = "Ingrid";
-	int c = 'm';
+	int c = 'n';
 
 	char *ptr = ft_strchr(s, c);
 	if (ptr != NULL)
-		printf("Caracter encontrado: %s.", ptr);
+	{
+		printf("Caracter encontrado: %c.\n", *ptr);
+		printf("String: %s.\n", ptr);
+	}
 	else
-		printf("Caracter não encontrado");
+		printf("Caracter não encontrado.\n");
 	return (0);
 }*/

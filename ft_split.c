@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 11:12:45 by ingrid            #+#    #+#             */
-/*   Updated: 2025/08/07 22:37:42 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/08 19:49:08 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,56 +21,82 @@ int	ft_count_words(char const *s, char c)
 	count = 0;
 	if (!s)
 		return (0);
-	else
+	while (s[i])
 	{
-		while (s[i])
-		{
-			if (s[i] != c && (i == 0 || s[i - 1] == c))
-				count++;
-			i++;
-		}
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+			count++;
+		i++;
 	}
 	return (count);
 }
 
+char	*ft_extract_word(char const **s_ptr, char c)
+{
+	char const	*s;
+	char const	*start;
+	char		*word;
+	size_t		len;
+
+	s = *s_ptr;
+	while (*s == c)
+		s++;
+	start = s;
+	while (*s && *s != c)
+		s++;
+	len = s - start;
+	*s_ptr = s;
+	word = ft_substr(start, 0, len);
+	if (!word)
+	{
+		free (word);
+		return (NULL);
+	}
+	return (word);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	start;
-	char			**words;
+	int		word_count;
+	char	**words;
+	int		i;
 
-	words = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	i = 0;
+	if (!s)
+		return (NULL);
+	word_count = ft_count_words(s, c);
+	words = malloc(sizeof(char *) * (word_count + 1));
 	if (!words)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
+	while (i < word_count)
 	{
-		if (s[i] != c)
+		words[i] = ft_extract_word(&s, c);
+		if (!words[i])
 		{
-			start = i;
-			while (s[i] && s[i] != c)
-				i++;
-			words[j] = ft_substr(s, start, (i - start));
-			j++;
+			while (i--)
+				free (words[i]);
+			free(words);
+			return (NULL);
 		}
-		else
-			i++;
+		i++;
 	}
-	return (words[j] = NULL, words);
+	words[i] = NULL;
+	return (words);
 }
 /*
 int	main(void)
 {
-	const char	s[100] = "      split       this for   me  !       ";
+	const char	s[100] = " split       this for   me  !       ";
 	char		c = ' ';
-	char		**ptr = ft_split(s, c);
-	int			i = 0;
-	while (ptr[i])
+	char		**words = ft_split(s,c);
+	int	i = 0;
+	if (!words)
+		return (1);
+	while (words[i])
 	{
-		printf("%s\n", ptr[i]);
+		printf("Palavra [%d]: %s\n", i, words[i]);
+		free(words[i]);
 		i++;
 	}
+	free(words);
 	return (0);
 }*/

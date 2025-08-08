@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:52:24 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/24 15:37:03 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/08 18:45:14 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(void)
 
 	while (i < sizeof(buffer))
 	{
-		printf("%c", buffer[i]);
+		printf("%c\n", buffer[i]);
 		i++;
 	}
 	return (0);

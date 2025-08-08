@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 18:34:28 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/26 13:49:39 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/08 19:22:22 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int main(void)
 	const char *s1 = "Ingrid";
 	const char *s2 = "InGrId";
 	size_t n = 6;
-	printf("Resultado com ft_memcmp: %d\n", ft_memcmp(s1, s2, n));
-	printf("Resultado com memcmp: %d\n", memcmp(s1, s2, n));
+	printf("%d\n", ft_memcmp(s1, s2, n));
 	return (0);
 }*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 16:40:47 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/24 11:59:39 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/08 19:40:54 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(void)
 {
 	char dst[10];
 	char *src = "Ingrid";
-	size_t size = ft_strlcpy(dst, scr, sizeof(dst));
+	size_t size = ft_strlcpy(dst, src, sizeof(dst));
 	printf("Destino: %s\n", dst);
 	printf("Tamanho da origem: %zu\n", size);
 	return (0);

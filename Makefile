@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+         #
+#    By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/22 11:29:52 by ilemos-c          #+#    #+#              #
-#    Updated: 2025/08/07 14:57:19 by ilemos-c         ###   ########.fr        #
+#    Updated: 2025/08/08 19:49:39 by ingrid           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ SRCS_BONUS = ft_lstnew_bonus.c \
 			ft_lstsize_bonus.c \
 			ft_lstlast_bonus.c \
 			ft_lstadd_back_bonus.c \
-			ft_lstdelone_bonus.c \
+			ft_lstdelone_bonus.c
 
 
 

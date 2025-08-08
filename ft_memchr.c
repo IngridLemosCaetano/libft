@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 18:34:00 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/26 13:48:15 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/08 19:15:58 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int	main(void)
 
 	char *ptr = ft_memchr(s, c, 6);
 	if (ptr != NULL)
-		printf("Caracter encontrado: %c.", *ptr);
+		printf("Caracter encontrado: %c.\n", *ptr);
 	else
-		printf("Caracter não encontrado");
+		printf("Caracter não encontrado.\n");
 	return (0);
 }*/

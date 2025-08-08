@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 14:24:39 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/31 11:30:58 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/08 19:39:17 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 int	main(void)
 {
 	char const *s1 = "42 ";
-    char const *s2 = "São Paulo";
+	char const *s2 = "São Paulo";
 	char	*new_str;
 	new_str = ft_strjoin(s1, s2);
-    if ( new_str == NULL)
+	if ( new_str == NULL)
 		printf("Não foi possível concatenar as strings.\n");
 	else{
 		printf("%s\n", new_str);
 		free(new_str);
 	}
-    return 0;
+	return 0;
 }*/

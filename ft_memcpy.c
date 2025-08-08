@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 17:05:48 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/26 13:44:03 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/08 19:23:04 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ int	main(void)
 	char	dest[10];
 
 	ft_memcpy(dest, src, sizeof(src));
-	printf("%s", dest);
+	printf("%s\n", dest);
 	return (0);
 }*/

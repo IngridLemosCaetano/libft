@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 12:28:57 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/07/31 11:30:40 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/08 19:37:34 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ char	*ft_strdup(const char *s)
 int	main(void)
 {
 	const char *s = "Ingrid";
-	printf("String destino = %s", ft_strdup(s));
+	char		*dest;
+	dest = ft_strdup(s);
+	printf("String destino = %s\n", dest);
+	free (dest);
 	return (0);
 }*/
