@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 17:14:27 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/09 11:47:08 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/24 20:28:02 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_length(long n)
+static int	get_length(long n)
 {
 	int	len;
 
@@ -25,7 +25,7 @@ int	get_length(long n)
 	return (len);
 }
 
-char	*allocate_string(int len, int is_negative)
+static char	*allocate_string(int len, int is_negative)
 {
 	char	*n;
 
@@ -35,7 +35,7 @@ char	*allocate_string(int len, int is_negative)
 	return (n);
 }
 
-void	fill_digits(char *str, long n, int index)
+static void	fill_digits(char *str, long n, int index)
 {
 	if (n == 0)
 	{
