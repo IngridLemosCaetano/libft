@@ -47,10 +47,7 @@ static char	*ft_extract_word(char const **s_ptr, char c)
 	*s_ptr = s;
 	word = ft_substr(start, 0, len);
 	if (!word)
-	{
-		free (word);
 		return (NULL);
-	}
 	return (word);
 }
 
