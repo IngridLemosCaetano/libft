@@ -37,11 +37,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!set)
 		return (ft_strdup(s1));
 	end = ft_strlen(s1);
+	if (end == 0)
+		return (ft_strdup(""));
 	while (ft_is_in_set(s1[start], set))
 		start++;
 	if (start == end)
 		return (ft_strdup(""));
-	while (ft_is_in_set(s1[end - 1], set))
+	while (end > start && ft_is_in_set(s1[end - 1], set))
 		end--;
 	return (ft_substr(s1, start, end - start));
 }
