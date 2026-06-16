@@ -27,11 +27,14 @@ O projeto conta com o arquivo Makefile que serve para compilar as funções e ge
 
 ![Web1](https://github.com/IngridLemosCaetano/libft/blob/main/src/libft.png)
 
+## Badge
+
+![Web1](https://github.com/IngridLemosCaetano/libft_plus/blob/main/assets/libft.png)
+
 ## <img src="https://github.com/user-attachments/assets/c7002718-57e0-4c87-9a47-5c14e509d9ea" width="30px"/> Autora
 
 Ingrid Lemos Caetano Silva
 
 👩‍💻 [GitHub](https://github.com/IngridLemosCaetano) | 💼 [Linkedin](https://br.linkedin.com/in/ingrid-lemos-caetano)
-
 
 ![42](https://img.shields.io/badge/School-42-black?style=for-the-badge)
