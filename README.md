@@ -25,11 +25,11 @@ O projeto conta com o arquivo Makefile que serve para compilar as funções e ge
 
 ## ✅ Grade
 
-![Web1](https://github.com/IngridLemosCaetano/libft/blob/main/src/libft.png)
+![Web1](https://github.com/IngridLemosCaetano/libft/blob/main/assets/grade.png)
 
 ## Badge
 
-![Web1](https://github.com/IngridLemosCaetano/libft_plus/blob/main/assets/libft.png)
+![Web1](https://github.com/IngridLemosCaetano/libft/blob/main/assets/libft.png)
 
 ## <img src="https://github.com/user-attachments/assets/c7002718-57e0-4c87-9a47-5c14e509d9ea" width="30px"/> Autora
 
